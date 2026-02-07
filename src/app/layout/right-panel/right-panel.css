@@ -12,6 +12,9 @@
   fill: none;
 }
 
+.bg-bug {
+  background-color: #E3F5FF !important;
+}
 
 .rightpanel-avatar {
   width: 36px;

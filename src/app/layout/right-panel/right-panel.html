@@ -4,7 +4,9 @@
   <div class="mb-3">
     <h6 class="mb-2" style="font-size:13px; font-weight:600; color:#6b7280; letter-spacing:0.3px;">Notifications</h6>
     <div *ngFor="let n of notifications" class="d-flex gap-3 py-2 align-items-start">
-      <div class="d-inline-flex align-items-center justify-content-center rounded-3" [ngStyle]="{width:'38px',height:'38px'}" [ngClass]="{'bg-light': true}">
+      <div class="d-inline-flex align-items-center justify-content-center rounded-3"
+     style="width:38px;height:38px;"
+     [ngClass]="n.icon === 'bug' ? 'bg-bug' : 'bg-light'">
         <img *ngIf="n.icon==='bug'" src="/assets/icons/bug.svg" alt="bug" style="width:18px;height:18px;">
         <img *ngIf="n.icon==='user'" src="/assets/icons/singleprofile.svg" alt="user" style="width:18px;height:18px;">
         <img *ngIf="n.icon==='mail'" src="/assets/icons/signal.svg" alt="signal" style="width:18px;height:18px;">
