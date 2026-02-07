@@ -2,8 +2,9 @@
   background: #fff;
   border-radius: 14px;
   padding: 16px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #eef2f6;
   margin-left: 20px;
+  box-shadow: 0 8px 22px rgba(15,23,42,0.06);
 
 }
 
@@ -14,6 +15,16 @@
   margin-bottom: 22px;
   padding: 4px 6px;
   font-size: 16px;
+}
+.chart-box {
+  width: 480px;      
+  max-width: 100%;
+}
+
+.chart-title {
+  font-weight: 700;
+  color: #111827;
+  font-size: 18px;
 }
 
 .tabs {
@@ -30,41 +41,10 @@
   border-left: 1px solid #e5e7eb;
 }
 
-.dark-dot,
-.light-dot {
-  font-size: 14px;
-}
 
-
-.tabs span {
-  margin-right: 18px;
-  color: #9ca3af;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.tabs span:hover {
-  color: #111;
-}
-
-.tabs .active {
-  color: #111;
-  font-weight: 600;
-}
-
-.dark-dot {
-  color: #111;
-}
-
-.light-dot {
-  color: #60a5fa;
-}
-
-.chart-body {
-  height: 300px;
-}
 
 canvas {
   width: 100% !important;
   height: 100% !important;
+  display: block;
 }

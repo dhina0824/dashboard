@@ -1,35 +1,35 @@
-<div class="products-card">
-  <h6>Best Selling Product</h6>
+<div class="rounded-3 border" style="background:#fff;border-color:#f0f0f0;padding:18px;margin-top:16px;margin-bottom:22px;margin-left:20px;margin-right:20px;">
+  <h6 class="m-0" style="font-weight:600;">Best Selling Product</h6>
 
-  <div class="products-wrapper">
+  <div style="position:relative;padding:0 50px;">
 
-    <button class="nav-btn left" [class.disabled]="currentIndex === 0" (click)="prev()">←</button>
-
-
-    <div class="products-viewport">
-
-      <div class="products-track" #track [style.transform]="'translateX(-' + translateX + 'px)'">
+    <button class="position-absolute top-50 translate-middle-y" [class.disabled]="currentIndex === 0" (click)="prev()" style="left:0;width:38px;height:38px;border-radius:10px;border:none;background:#E4E1F5;color:#776ACF;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:600;box-shadow:0 3px 8px rgba(0,0,0,0.06);cursor:pointer;">←</button>
 
 
-        <div class="product" *ngFor="let p of products">
-          <div class="img-box">
-            <div *ngIf="p.sale" class="ribbon">Sale</div>
+    <div style="overflow:hidden;width:666px;margin:auto;">
+
+      <div class="d-flex" style="gap:22px;transition:transform 0.6s ease;" #track [style.transform]="'translateX(-' + translateX + 'px)'">
+
+
+        <div style="width:200px;text-align:center;border:1px solid #f1f5f9;border-radius:14px;padding:16px;background:#fff;transition:0.2s;flex-shrink:0;" class="product" *ngFor="let p of products">
+          <div style="height:190px;background:#cccccc;border-radius:10px;margin-bottom:14px;position:relative;overflow:hidden;">
+            <div *ngIf="p.sale" style="position:absolute;top:12px;right:-38px;background:#22c55e;color:#fff;padding:6px 40px;font-size:12px;font-weight:600;transform:rotate(45deg);text-align:center;box-shadow:0 3px 6px rgba(0,0,0,0.1);">Sale</div>
           </div>
 
-          <div class="name">{{p.name}}</div>
+          <div style="font-size:14px;margin-bottom:26px;min-height:42px;">{{p.name}}</div>
 
-          <div class="price-row">
-            <span class="old">{{p.oldPrice}}</span>
-            <span class="new">{{p.price}}</span>
+          <div style="margin-bottom:10px;">
+            <span style="text-decoration:line-through;color:#9ca3af;margin-right:6px;">{{p.oldPrice}}</span>
+            <span style="color:#6366f1;font-weight:600;">{{p.price}}</span>
           </div>
 
-          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div style="color:#f59e0b;font-size:14px;">⭐⭐⭐⭐⭐</div>
         </div>
 
       </div>
     </div>
 
-    <button class="nav-btn right" [class.disabled]="currentIndex >= maxIndex" (click)="next()">→</button>
+    <button class="position-absolute top-50 translate-middle-y" [class.disabled]="currentIndex >= maxIndex" (click)="next()" style="right:0;width:38px;height:38px;border-radius:10px;border:none;background:#E4E1F5;color:#776ACF;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:600;box-shadow:0 3px 8px rgba(0,0,0,0.06);cursor:pointer;">→</button>
 
   </div>
 </div>

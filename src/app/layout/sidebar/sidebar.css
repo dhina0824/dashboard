@@ -1,165 +1,25 @@
-.sidebar {
-  width: 230px;
-  background: #ffffff;
-  min-height: 364vh;
-  padding: 20px 15px;
-  border-right: 1px solid #eaeaea;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.logo-icon {
-  width: 32px;
-  height: 32px;
-  background: #111;
-  color: #fff;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.section-title {
-  font-size: 12px;
-  color: #9aa0a6;
-  margin: 10px 0 6px;
-  text-transform: capitalize;
-}
-
-.menu-item {
-  list-style: none;
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #444;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.menu-item:hover {
-  background: #f5f7fb;
-}
-
-.active-pill {
-  background: #f0f2f5;
-  font-weight: 600;
-}
-
-.icon {
-  font-size: 14px;
-}
-
-.menu-section {
-  margin-bottom: 18px;
-}
-
-.menu-list {
-  padding-left: 0;
-  margin-top: 6px;
-}
-
-.fav-tabs {
-  display: flex;
-  gap: 14px;
-  font-size: 13px;
-  margin-bottom: 6px;
-}
-
-.tab {
-  color: #9aa0a6;
-  cursor: pointer;
-  padding-bottom: 4px;
-}
-
-.tab.active {
-  color: #9aa0a6;
-  font-weight: 600;
-  border-bottom: 2px;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  background: #cbd5e1;
-  border-radius: 50%;
-}
 
 
-.arrow {
-  position: absolute;
-  left: 6px;
-  font-size: 24px;
-  color: #bfc5cc;
-
-  margin-bottom: 10px;
+.rotate {
+  transform: rotate(90deg);
   transition: transform 0.2s ease;
 }
 
-.menu-item:hover .arrow {
-  color: #6b7280;
 
+.sidebar-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 
-.menu-svg {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
 
-.arrow-icon {
-  position: absolute;
-  left: 6px;
-  width: 12px;
-  height: 12px;
-  opacity: 0.5;
-}
-
-.has-arrow {
-  position: relative;
-  padding-left: 26px;
-}
-
-.submenu {
-  list-style: none;
-  padding-left: 44px;
-  margin: 8px 0 12px;
-}
-
-.submenu li {
+.sidebar-submenu li {
   padding: 10px 0;
   font-size: 14px;
   color: #374151;
-  cursor: pointer;
 }
-
-.submenu li:hover {
-  color: #111827;
-}
-
-.arrow svg {
-  width: 14px;
-  height: 14px;
-  stroke: #9ca3af;
-  stroke-width: 2;
-  fill: none;
-}
-
-.arrow.rotate {
-  transform: rotate(90deg);
-}
-
-.avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 5px;
+.no-underline,
+.no-underline:hover,
+.no-underline:focus {
+  text-decoration: none !important;
 }

@@ -1,22 +1,21 @@
-<div class="chart-card">
+<div class="card chart-card rounded-3 border-light shadow-sm p-3">
 
-  <div class="chart-header">
-    <div class="tabs">
-      <span [class.active]="activeTab==='users'" (click)="setTab('users')">Total Users</span>
-      <span [class.active]="activeTab==='projects'" (click)="setTab('projects')">Total Projects</span>
-      <span [class.active]="activeTab==='status'" (click)="setTab('status')">Operating Status</span>
+
+  <div class="d-flex align-items-center justify-content-between mb-3 px-1">
+    <div class="d-flex align-items-center" style="gap:28px;">
+      <button class="btn btn-link p-0" [class.text-dark]="activeTab==='users'" [class.text-muted]="activeTab!=='users'" [class.fw-semibold]="activeTab==='users'" (click)="setTab('users')">Total Users</button>
+      <button class="btn btn-link p-0" [class.text-dark]="activeTab==='projects'" [class.text-muted]="activeTab!=='projects'" [class.fw-semibold]="activeTab==='projects'" (click)="setTab('projects')">Total Projects</button>
+      <button class="btn btn-link p-0" [class.text-dark]="activeTab==='status'" [class.text-muted]="activeTab!=='status'" [class.fw-semibold]="activeTab==='status'" (click)="setTab('status')">Operating Status</button>
     </div>
 
-
-    <div class="year">
-      <span class="dark-dot">● This year</span>
-      <span class="light-dot">● Last year</span>
+    <div class="d-flex align-items-center border-start ps-3" style="border-color:#e5e7eb; gap:16px;">
+      <div class="d-flex align-items-center gap-2"><span class="text-dark">●</span><span class="text-muted">This year</span></div>
+      <div class="d-flex align-items-center gap-2"><span class="text-primary">●</span><span class="text-muted">Last year</span></div>
     </div>
   </div>
 
-  <div class="chart-body">
-    <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="'line'">
-    </canvas>
+  <div class="position-relative" style="height:300px;">
+    <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="'line'" class="w-100 h-100" role="img" aria-label="Total Users chart"></canvas>
   </div>
 
 </div>

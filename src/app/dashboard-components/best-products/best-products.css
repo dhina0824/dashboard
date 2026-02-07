@@ -1,134 +1,16 @@
-.products-card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px;
-  border: 1px solid #f0f0f0;
-  margin-top: 16px;
-  margin-bottom: 22px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.products-wrapper {
-  position: relative;
-  padding: 0 50px;
-}
-
-.products-viewport {
-  overflow: hidden;
-  width: 666px;
-  margin: auto;
-}
 
 
-.products-track {
-  display: flex;
-  gap: 22px;
-  transition: transform 0.6s ease;
-}
-
-.product {
-  width: 200px;
-  text-align: center;
-  border: 1px solid #f1f5f9;
-  border-radius: 14px;
-  padding: 16px;
-  background: #fff;
-  transition: 0.2s;
-  flex-shrink: 0;
+.rounded-3 {
+  border-radius: 14px !important;
 }
 
 .product:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-
-.img-box {
-  height: 190px;
-  background: #cccccc;
-  border-radius: 10px;
-  margin-bottom: 14px;
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-btn.disabled {
+button.disabled {
   background: #f1f5f9 !important;
   color: #cbd5e1 !important;
   cursor: not-allowed;
-  box-shadow: none;
-}
-
-
-.ribbon {
-  position: absolute;
-  top: 12px;
-  right: -38px;
-  background: #22c55e;
-  color: #fff;
-  padding: 6px 40px;
-  font-size: 12px;
-  font-weight: 600;
-  transform: rotate(45deg);
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-.name {
-  font-size: 14px;
-  margin-bottom: 26px;
-  min-height: 42px;
-}
-
-.price-row {
-  margin-bottom: 10px;
-}
-
-
-.old {
-  text-decoration: line-through;
-  color: #9ca3af;
-  margin-right: 6px;
-}
-
-.new {
-  color: #6366f1;
-  font-weight: 600;
-}
-
-.stars {
-  color: #f59e0b;
-  font-size: 14px;
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 38px;
-  height: 38px;
-
-  border-radius: 10px;
-  border: none;
-  background: #E4E1F5;
-  color: #776ACF;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-}
-
-.nav-btn.left {
-  left: 0;
-}
-
-.nav-btn.right {
-  right: 0;
+  box-shadow: none !important;
 }

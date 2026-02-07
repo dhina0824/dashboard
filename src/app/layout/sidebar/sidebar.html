@@ -1,74 +1,83 @@
-<div class="sidebar">
+<div class="d-flex flex-column bg-white" style="width:230px; min-height:304vh; padding:20px 15px; border-right:1px solid #eaeaea;">
 
-
-  <div class="logo">
-    <img [src]="'https://i.pravatar.cc/32?img=1'" class="avatar">
+  <div class="d-flex align-items-center mb-3 fw-semibold" style="font-size:18px;">
+    <img [src]="'https://i.pravatar.cc/32?img=1'" class="rounded-circle me-2" width="32" height="32" alt="avatar">
     <span>ByeWind</span>
   </div>
 
 
-  <div class="menu-section">
+  <div class="mb-3">
+    <div class="d-flex gap-3 mb-1" style="font-size:13px;">
+    <button class="btn btn-link no-underline p-0" [class.text-dark]="true">Favorites</button>
+<button class="btn btn-link no-underline p-0 text-muted">Recently</button>
 
-    <div class="fav-tabs">
-      <span class="tab active">Favorites</span>
-      <span class="tab">Recently</span>
     </div>
 
-    <ul class="menu-list">
-      <li class="menu-item active">
-        <span class="dot"></span> Overview
+    <ul class="list-unstyled mt-1 mb-0">
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <span class="d-inline-block rounded-circle me-2" style="width:6px;height:6px;background:#cbd5e1;"></span>
+        Overview
       </li>
-      <li class="menu-item">
-        <span class="dot"></span> Projects
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <span class="d-inline-block rounded-circle me-2" style="width:6px;height:6px;background:#cbd5e1;"></span>
+        Projects
       </li>
-    </ul>
-
-  </div>
-
-
-  <div class="menu-section">
-    <p class="section-title">Dashboards</p>
-    <ul class="menu-list">
-      <li class="menu-item active-pill"><img src="/assets/icons/overview.svg" class="menu-svg"> Overview</li>
-      <li class="menu-item"><span class="arrow">›</span><img src="/assets/icons/ecommerce.svg" class="menu-svg">
-        eCommerce</li>
-      <li class="menu-item"><span class="arrow">›</span><img src="/assets/icons/projects.svg" class="menu-svg"> Projects
-      </li>
-      <li class="menu-item"><span class="arrow">›</span><img src="/assets/icons/onlinecourses.svg" class="menu-svg">
-        Online Courses</li>
     </ul>
   </div>
 
 
-  <div class="menu-section">
-    <p class="section-title">Pages</p>
-    <ul class="menu-list">
-      <li class="menu-item has-arrow" (click)="toggleProfile()">
-        <span class="arrow" [class.rotate]="profileOpen">
-          <svg viewBox="0 0 24 24">
+  <div class="mb-3">
+    <p class="mb-2" style="font-size:12px;color:#9aa0a6;margin:0 0 6px 0; text-transform:capitalize;">Dashboards</p>
+    <ul class="list-unstyled mt-1 mb-0">
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="background:#f0f2f5; font-weight:600; font-size:14px;">
+        <img src="/assets/icons/overview.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> Overview
+      </li>
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <img src="/assets/icons/ecommerce.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> eCommerce
+      </li>
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <img src="/assets/icons/projects.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> Projects
+      </li>
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <img src="/assets/icons/onlinecourses.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> Online Courses
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="mb-3">
+    <p class="mb-2" style="font-size:12px;color:#9aa0a6;margin:0 0 6px 0; text-transform:capitalize;">Pages</p>
+    <ul class="list-unstyled mt-1 mb-0">
+      <li class="position-relative py-2 ps-3 rounded" style="font-size:14px;">
+        <button class="btn btn-link p-0 position-absolute start-0" (click)="toggleProfile()" [attr.aria-expanded]="profileOpen" style="left:6px;">
+          <svg viewBox="0 0 24 24" [class.rotate]="profileOpen" style="width:14px;height:14px;stroke:#9ca3af;stroke-width:2;fill:none;">
             <polyline points="9 6 15 12 9 18"></polyline>
           </svg>
-        </span>
-        <img src="/assets/icons/userprofile.svg" class="menu-svg"> User Profile
+        </button>
+        <img src="/assets/icons/userprofile.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> User Profile
 
       </li>
 
-      <ul class="submenu" *ngIf="profileOpen">
-        <li>Overview</li>
-        <li>Projects</li>
-        <li>Campaigns</li>
-        <li>Documents</li>
-        <li>Followers</li>
+      <ul *ngIf="profileOpen" class="list-unstyled ps-4 mt-2 mb-3">
+        <li class="py-2" style="font-size:14px;color:#374151;">Overview</li>
+        <li class="py-2" style="font-size:14px;color:#374151;">Projects</li>
+        <li class="py-2" style="font-size:14px;color:#374151;">Campaigns</li>
+        <li class="py-2" style="font-size:14px;color:#374151;">Documents</li>
+        <li class="py-2" style="font-size:14px;color:#374151;">Followers</li>
       </ul>
 
-      <li class="menu-item has-arrow"><span class="arrow">›</span> <img src="/assets/icons/account.svg"
-          class="menu-svg"> Account</li>
-      <li class="menu-item has-arrow"><span class="arrow">›</span><img src="/assets/icons/corporate.svg"
-          class="menu-svg"> Corporate</li>
-      <li class="menu-item has-arrow"><span class="arrow">›</span><img src="/assets/icons/blog.svg" class="menu-svg">
-        Blog</li>
-      <li class="menu-item has-arrow"><span class="arrow">›</span><img src="/assets/icons/social.svg" class="menu-svg">
-        Social</li>
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <img src="/assets/icons/account.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> Account
+      </li>
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <img src="/assets/icons/corporate.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> Corporate
+      </li>
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <img src="/assets/icons/blog.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> Blog
+      </li>
+      <li class="d-flex align-items-center gap-2 py-2 px-2 rounded" style="font-size:14px; color:#444;">
+        <img src="/assets/icons/social.svg" class="me-2" style="width:18px;height:18px;object-fit:contain;"> Social
+      </li>
 
     </ul>
   </div>

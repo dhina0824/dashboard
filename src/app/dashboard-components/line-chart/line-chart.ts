@@ -49,22 +49,38 @@ export class LineChart {
     }
   }
   loadUsersChart() {
+   
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    let gradient: CanvasGradient | string = 'rgba(17,24,39,0.04)';
+    if (ctx) {
+      const g = ctx.createLinearGradient(0, 0, 0, 300);
+      g.addColorStop(0, 'rgba(17,24,39,0.08)');
+      g.addColorStop(0.6, 'rgba(17,24,39,0.04)');
+      g.addColorStop(1, 'rgba(17,24,39,0.00)');
+      gradient = g;
+    }
+
+
     this.lineChartData = {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
       datasets: [
         {
           label: 'This year',
-          data: [9, 6, 10, 22, 21, 17, 19],
+          data: [9, 1, 10, 22, 26, 18, 20],
           borderColor: '#111827',
           borderWidth: 3,
+          borderCapStyle: 'round',
+          borderJoinStyle: 'round',
           tension: 0.45,
           pointRadius: 0,
-          fill: false,
+          fill: true,
+          backgroundColor: gradient,
           cubicInterpolationMode: 'monotone'
         },
         {
           label: 'Last year',
-          data: [2, 9, 17, 6, 10, 20, 26],
+          data: [2, 9, 18, 8, 7, 22, 26],
           borderColor: '#93c5fd',
           borderWidth: 3,
           borderDash: [6, 6],
@@ -176,6 +192,13 @@ export class LineChart {
       padding: { top: 10, left: 10, right: 20, bottom: 0 }
     },
 
+    elements: {
+      line: {
+        borderCapStyle: 'round',
+        borderJoinStyle: 'round'
+      }
+    },
+
     scales: {
       y: {
         min: 0,
@@ -184,7 +207,7 @@ export class LineChart {
           stepSize: 10,
           color: '#9ca3af',
           font: { size: 12 },
-          callback: (value) => value + 'K'
+          callback: (value: any) => (Number(value) === 0 ? '0' : value + 'K')
         },
         grid: {
           color: '#f1f5f9',

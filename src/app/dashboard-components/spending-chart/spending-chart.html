@@ -1,22 +1,21 @@
-<div class="spend-card">
+<div class="d-flex flex-column rounded-3 border" style="background:#fff;padding:18px 18px 0 18px;margin-right:20px;border-color:#f0f0f0;">
 
 
-  <div class="card-head">
-    <div class="left">
-      <!-- <div class="icon">💳</div> -->
-      <div class="icon">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center" style="gap:10px;">
+      <div class="d-flex align-items-center justify-content-center" style="width:34px;height:34px;border-radius:10px;background:#F2F2F2;">
         <span class="material-icons">open_with</span>
       </div>
       <div>
-        <div class="title">Spendings</div>
-        <div class="sub">Payments</div>
+        <div style="font-weight:600;font-size:14px;">Spendings</div>
+        <div style="font-size:12px;color:#9ca3af;">Payments</div>
       </div>
     </div>
-    <div class="menu">⋯</div>
+    <div class="d-flex align-items-center justify-content-center" style="width:32px;height:32px;background:#F2F2F2;border-radius:10px;font-size:20px;">⋯</div>
   </div>
 
 
-  <div class="donut-wrapper" (mousemove)="onHover($event)" (mouseleave)="hideTip()">
+  <div class="donut-wrapper position-relative d-flex justify-content-center align-items-center" style="height:224px;" (mousemove)="onHover($event)" (mouseleave)="hideTip()">
     <canvas baseChart [data]="pieChartData" [options]="pieChartOptions" [plugins]="pieChartPlugins" [type]="'doughnut'">
     </canvas>
 
@@ -32,16 +31,16 @@
 
 
 
-  <div class="legend">
-    <div><span class="dot blue"></span> SERVER (20%)</div>
-    <div><span class="dot green"></span> HOSTING (40%)</div>
-    <div><span class="dot orange"></span> SERVICES (15%)</div>
-    <div><span class="dot gray"></span> OTHERS (15%)</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;font-size:12px;color:#6b7280;margin-top:8px;margin-bottom:6px;">
+    <div><span style="width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;background:#3b82f6;"></span> SERVER (20%)</div>
+    <div><span style="width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;background:#22c55e;"></span> HOSTING (40%)</div>
+    <div><span style="width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;background:#f97316;"></span> SERVICES (15%)</div>
+    <div><span style="width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;background:#e5e7eb;"></span> OTHERS (15%)</div>
   </div>
 
 
-  <div class="footer">
+  <div class="d-flex justify-content-end align-items-center" style="margin-top:auto;margin-left:-18px;margin-right:-18px;padding:14px 18px;border-top:1px solid #eef1f5;gap:6px;font-size:12px;color:#111;font-weight:600;cursor:pointer;">
     SEE DETAILS
-    <span class="material-icons arrow">chevron_right</span>
+    <span class="material-icons" style="font-size:20px;">chevron_right</span>
   </div>
 </div>

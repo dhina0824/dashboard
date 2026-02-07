@@ -16,7 +16,7 @@ interface ActivityItem {
   imports: [CommonModule],
   standalone: true,
   templateUrl: './right-panel.html',
-  styleUrl: './right-panel.css',
+  styleUrls: ['./right-panel.css'],
 })
 export class RightPanel {
   notifications = [

@@ -22,7 +22,7 @@ export class BestProducts implements AfterViewInit, OnDestroy {
   ];
 
   visibleCards = 3;
-  cardWidth = 222; // 200px width + 22px gap
+  cardWidth = 222; 
   currentIndex = 0;
   translateX = 0;
   autoSlideInterval: any;
@@ -36,20 +36,27 @@ export class BestProducts implements AfterViewInit, OnDestroy {
   }
 
   next() {
+    if (this.currentIndex < this.maxIndex) {
+      this.currentIndex += 1;
+      this.updatePosition();
+      this.cdr.markForCheck();
+    }
+  }
+
+  prev() {
+    if (this.currentIndex > 0) {
+      this.currentIndex -= 1;
+      this.updatePosition();
+      this.cdr.markForCheck();
+    }
+  }
+
+ 
+  private autoNext() {
     if (this.currentIndex >= this.maxIndex) {
       this.currentIndex = 0;
     } else {
       this.currentIndex += 1;
-    }
-    this.updatePosition();
-    this.cdr.markForCheck();
-  }
-
-  prev() {
-    if (this.currentIndex <= 0) {
-      this.currentIndex = this.maxIndex;
-    } else {
-      this.currentIndex -= 1;
     }
     this.updatePosition();
     this.cdr.markForCheck();
@@ -62,7 +69,7 @@ export class BestProducts implements AfterViewInit, OnDestroy {
   startAutoSlide() {
     this.clearAutoSlide();
     this.autoSlideInterval = setInterval(() => {
-      this.next();
+      this.autoNext();
     }, 3000);
   }
 
