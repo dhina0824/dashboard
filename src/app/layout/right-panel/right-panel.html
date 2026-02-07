@@ -1,0 +1,59 @@
+<div class="panel">
+
+  <!-- Notifications -->
+  <div class="section">
+    <h6>Notifications</h6>
+    <div class="item" *ngFor="let n of notifications">
+      <div class="icon-box" [ngClass]="n.icon">
+        <img *ngIf="n.icon==='bug'" src="/assets/icons/bug.svg" alt="bug">
+        <img *ngIf="n.icon==='user'" src="/assets/icons/singleprofile.svg" alt="user">
+        <img *ngIf="n.icon==='mail'" src="/assets/icons/signal.svg" alt="signal">
+      </div>
+
+
+
+      <div>
+        <div class="text">{{n.text}}</div>
+        <div class="time">{{n.time}}</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="section">
+    <h6>Activities</h6>
+    <div class="item" *ngFor="let a of activities">
+      <img [src]="a.avatar" class="activity-avatar">
+      <div>
+        <div class="text">{{a.text}}</div>
+        <div class="time">{{a.time}}</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="section contacts">
+
+    <div class="section-header">
+      <svg class="chev-icon" viewBox="0 0 24 24">
+        <path d="M6 5l6 6 6-6" />
+      </svg>
+      <h6 class="contact-title">Recent contacts</h6>
+    </div>
+
+
+    <div class="contact-row" *ngFor="let c of contacts">
+      <img [src]="'https://i.pravatar.cc/40?u=' + c" />
+      <span class="contact-name">{{c}}</span>
+    </div>
+
+    <div class="fav-row">
+      <svg class="chev-icon" viewBox="0 0 24 24">
+        <polyline points="9 6 15 12 9 18"></polyline>
+      </svg>
+      Favourite contacts
+    </div>
+
+  </div>

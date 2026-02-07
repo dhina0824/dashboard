@@ -1,0 +1,43 @@
+<div class="reviews-card">
+
+  <div class="card-head">
+    <div class="title-area">
+      <div class="icon">
+        <span class="material-icons">open_with</span>
+      </div>
+
+      <div>
+        <h6>Customer Reviews</h6>
+        <small>Messages</small>
+      </div>
+    </div>
+
+    <div class="menu">⋯</div>
+  </div>
+
+  <div class="reviews-list">
+    <div class="review-item" *ngFor="let r of reviews">
+      <div class="left">
+        <div>
+          <div class="top-line">
+            <strong>{{r.name}}</strong>
+            <span class="time">{{r.time}}</span>
+          </div>
+          <p>{{r.text}}</p>
+        </div>
+      </div>
+
+      <div class="rating">
+        ⭐ {{r.rating}}/5
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    SEE ALL REVIEWS
+    <span class="material-icons arrow">chevron_right</span>
+  </div>
+
+
+</div>

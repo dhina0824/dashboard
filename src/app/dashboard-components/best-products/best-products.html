@@ -1,0 +1,35 @@
+<div class="products-card">
+  <h6>Best Selling Product</h6>
+
+  <div class="products-wrapper">
+
+    <button class="nav-btn left" [class.disabled]="currentIndex === 0" (click)="prev()">←</button>
+
+
+    <div class="products-viewport">
+
+      <div class="products-track" #track [style.transform]="'translateX(-' + translateX + 'px)'">
+
+
+        <div class="product" *ngFor="let p of products">
+          <div class="img-box">
+            <div *ngIf="p.sale" class="ribbon">Sale</div>
+          </div>
+
+          <div class="name">{{p.name}}</div>
+
+          <div class="price-row">
+            <span class="old">{{p.oldPrice}}</span>
+            <span class="new">{{p.price}}</span>
+          </div>
+
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="nav-btn right" [class.disabled]="currentIndex >= maxIndex" (click)="next()">→</button>
+
+  </div>
+</div>

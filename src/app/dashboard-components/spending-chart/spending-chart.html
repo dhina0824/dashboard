@@ -1,0 +1,47 @@
+<div class="spend-card">
+
+
+  <div class="card-head">
+    <div class="left">
+      <!-- <div class="icon">💳</div> -->
+      <div class="icon">
+        <span class="material-icons">open_with</span>
+      </div>
+      <div>
+        <div class="title">Spendings</div>
+        <div class="sub">Payments</div>
+      </div>
+    </div>
+    <div class="menu">⋯</div>
+  </div>
+
+
+  <div class="donut-wrapper" (mousemove)="onHover($event)" (mouseleave)="hideTip()">
+    <canvas baseChart [data]="pieChartData" [options]="pieChartOptions" [plugins]="pieChartPlugins" [type]="'doughnut'">
+    </canvas>
+
+    <div class="chart-tip" *ngIf="tipVisible" [style.left.px]="tipX" [style.top.px]="tipY">
+      <div class="tip-title">{{tipData.label}}</div>
+      <div>Payment: {{tipData.percent}}%</div>
+      <div>Amount Spend: ₹{{tipData.amount}}</div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="legend">
+    <div><span class="dot blue"></span> SERVER (20%)</div>
+    <div><span class="dot green"></span> HOSTING (40%)</div>
+    <div><span class="dot orange"></span> SERVICES (15%)</div>
+    <div><span class="dot gray"></span> OTHERS (15%)</div>
+  </div>
+
+
+  <div class="footer">
+    SEE DETAILS
+    <span class="material-icons arrow">chevron_right</span>
+  </div>
+</div>

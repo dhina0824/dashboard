@@ -1,0 +1,58 @@
+.traffic-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #111;
+}
+
+
+.traffic-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+
+.name {
+  width: 120px;
+  min-width: 120px;
+  font-size: 17px;
+  color: #111;
+}
+
+
+.segments {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  align-items: center;
+}
+
+.seg {
+  height: 6px;
+  border-radius: 10px;
+}
+
+
+.black {
+  background: #111;
+}
+
+.grey1 {
+  background: #9ca3af;
+}
+
+.grey2 {
+  background: #e5e7eb;
+}

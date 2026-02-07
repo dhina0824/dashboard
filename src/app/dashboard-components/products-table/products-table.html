@@ -1,0 +1,35 @@
+<div class="table-card">
+
+  <div class="card-head">
+    <h6>Products</h6>
+    <div class="menu">⋯</div>
+  </div>
+
+  <div class="table-head">
+    <span>Info</span>
+    <span>Date</span>
+    <span>Amount</span>
+    <span>Status</span>
+  </div>
+
+  <div class="table-body">
+
+    <div class="row-item" *ngFor="let o of orders; let i = index">
+
+      <div class="info">
+        <img [src]="'https://i.pravatar.cc/32?img=' + (i+1)" class="avatar">
+
+        <span>{{o.name}}</span>
+      </div>
+
+      <div>{{o.date}}</div>
+      <div>{{o.amount}}</div>
+
+      <div>
+        <span class="status" [ngClass]="o.color">{{o.status}}</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>

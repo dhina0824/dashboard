@@ -1,0 +1,104 @@
+<div class="dashboard-top">
+
+  <h2 class="page-title">Overview</h2>
+
+  <div class="today-select">
+    Today
+    <svg viewBox="0 0 24 24">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+
+</div>
+<div class="stats-grid">
+  <div class="card" *ngFor="let s of stats">
+
+
+    <div class="top-row" *ngIf="s.type==='orders' || s.type==='sales'">
+
+
+      <div class="icon" [ngStyle]="{'background': s.bg}" [ngClass]="s.type">
+
+
+        <svg *ngIf="s.type==='orders'" viewBox="0 0 24 24">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.5 13h11l3-8H6" />
+        </svg>
+
+
+        <svg *ngIf="s.type==='sales'" viewBox="0 0 24 24">
+          <rect x="5" y="10" width="14" height="10" rx="2" />
+          <path d="M8 10V7a4 4 0 018 0v3" />
+        </svg>
+
+      </div>
+
+
+      <div class="growth-box" [class.red]="s.growth.includes('-')">
+        <span>{{s.growth}}</span>
+
+
+        <svg class="trend-arrow" viewBox="0 0 24 24">
+          <path d="M7 14l5-5 5 5" />
+        </svg>
+      </div>
+
+    </div>
+
+
+
+
+    <h2>
+      {{s.value}}
+      <span class="growth inline" [class.red]="s.growth.includes('-')" *ngIf="s.type!=='orders' && s.type!=='sales'">
+        {{s.growth}}
+      </span>
+    </h2>
+
+    <p class="label">{{s.label}}</p>
+
+
+    <div *ngIf="s.type==='profit'" class="profit-bars">
+
+      <div class="col">
+        <div class="bar dark h3"></div>
+        <div class="bar red h1"></div>
+      </div>
+      <div class="col">
+        <div class="bar dark h1"></div>
+        <div class="bar red h1"></div>
+      </div>
+
+      <div class="col">
+        <div class="bar dark h4"></div>
+        <div class="bar red h2"></div>
+      </div>
+
+      <div class="col">
+        <div class="bar dark h2"></div>
+        <div class="bar red h1"></div>
+      </div>
+
+      <div class="col">
+        <div class="bar dark h3"></div>
+        <div class="bar red h2"></div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div *ngIf="s.type==='growth'" class="donut-wrap">
+      <div class="donut">
+        <span>12%</span>
+      </div>
+    </div>
+
+
+    <span *ngIf="s.period" class="pill">{{s.period}}</span>
+
+  </div>
+</div>
