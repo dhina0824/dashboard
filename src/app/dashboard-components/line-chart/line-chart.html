@@ -3,9 +3,9 @@
 
   <div class="d-flex align-items-center justify-content-between mb-3 px-1">
     <div class="d-flex align-items-center" style="gap:28px;">
-      <button class="btn btn-link p-0" [class.text-dark]="activeTab==='users'" [class.text-muted]="activeTab!=='users'" [class.fw-semibold]="activeTab==='users'" (click)="setTab('users')">Total Users</button>
-      <button class="btn btn-link p-0" [class.text-dark]="activeTab==='projects'" [class.text-muted]="activeTab!=='projects'" [class.fw-semibold]="activeTab==='projects'" (click)="setTab('projects')">Total Projects</button>
-      <button class="btn btn-link p-0" [class.text-dark]="activeTab==='status'" [class.text-muted]="activeTab!=='status'" [class.fw-semibold]="activeTab==='status'" (click)="setTab('status')">Operating Status</button>
+      <button class="btn p-0" [class.text-dark]="activeTab==='users'" [class.text-muted]="activeTab!=='users'" [class.fw-semibold]="activeTab==='users'" (click)="setTab('users')">Total Users</button>
+      <button class="btn p-0" [class.text-dark]="activeTab==='projects'" [class.text-muted]="activeTab!=='projects'" [class.fw-semibold]="activeTab==='projects'" (click)="setTab('projects')">Total Projects</button>
+      <button class="btn p-0" [class.text-dark]="activeTab==='status'" [class.text-muted]="activeTab!=='status'" [class.fw-semibold]="activeTab==='status'" (click)="setTab('status')">Operating Status</button>
     </div>
 
     <div class="d-flex align-items-center border-start ps-3" style="border-color:#e5e7eb; gap:16px;">
