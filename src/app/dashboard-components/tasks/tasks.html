@@ -1,0 +1,21 @@
+<div class="tasks-card">
+
+  <h6>Tasks</h6>
+
+
+  <div class="tasks-list">
+    <div class="task-item" *ngFor="let t of tasks">
+      <input type="checkbox" class="check">
+      <div class="info">
+        <div class="title">{{t.title}}</div>
+        <div class="date">{{t.date}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    SEE ALL
+    <span class="material-icons arrow">chevron_right</span>
+  </div>
+
+</div>

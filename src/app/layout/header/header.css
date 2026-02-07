@@ -1,0 +1,110 @@
+.header {
+  height: 58px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.star {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.crumb {
+  color: #9ca3af;
+}
+
+.crumb.active {
+  color: #111;
+  font-weight: 600;
+}
+
+.slash {
+  color: #d1d5db;
+}
+
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #F3F3F3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 120px;
+}
+
+.search-icon {
+  color: #9ca3af;
+}
+
+.shortcut {
+  background: #F3F3F3;
+  border: 1px solid #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.top-icon {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.top-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.bell svg {
+  transform: scale(1.18);
+}
+
+.star-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.star-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}

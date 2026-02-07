@@ -1,0 +1,16 @@
+<div class="d-flex app-layout">
+
+  <app-sidebar></app-sidebar>
+
+  <div class="flex-grow-1 main-area">
+    <app-header (notifyClick)="openPanel()" (boxClick)="togglePanel()">
+    </app-header>
+
+    <div class="app-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <app-right-panel *ngIf="panelOpen"></app-right-panel>
+
+</div>

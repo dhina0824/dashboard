@@ -1,0 +1,50 @@
+<div class="chat-card">
+
+
+  <div class="card-head">
+    <h6>Recent Conversations</h6>
+    <div class="menu">⋯</div>
+  </div>
+
+
+  <div class="chat-body" #chatBody>
+
+    <div *ngFor="let c of chats" class="msg-row" [ngClass]="c.side">
+
+
+      <div *ngIf="c.side === 'left'" class="row-left">
+        <div class="avatar-col">
+          <img src="https://i.pravatar.cc/100?img=5" class="avatar">
+          <span class="time">{{c.time}}</span>
+        </div>
+
+        <div class="text-col">
+          <div class="name">{{c.user}}</div>
+          <div class="bubble left-bubble">{{c.msg}}</div>
+        </div>
+      </div>
+
+
+      <div *ngIf="c.side === 'right'" class="row-right">
+        <div class="text-col right-text">
+          <div class="name right-name">{{c.user}}</div>
+          <div class="bubble right-bubble">{{c.msg}}</div>
+        </div>
+
+        <div class="avatar-col">
+          <img src="https://i.pravatar.cc/100?img=12" class="avatar">
+          <span class="time">{{c.time}}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="chat-input">
+    <input type="text" [(ngModel)]="newMsg" placeholder="Enter your text">
+    <button (click)="sendMessage()">Send</button>
+  </div>
+
+</div>

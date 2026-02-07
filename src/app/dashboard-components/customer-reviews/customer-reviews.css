@@ -1,0 +1,150 @@
+.reviews-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 18px 0 18px;
+  border: 1px solid #f0f0f0;
+  margin-left: 20px;
+
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background: #F2F2F2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-icons {
+  font-size: 24px;
+  color: #111;
+}
+
+
+.card-head h6 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.card-head small {
+  color: #9ca3af;
+}
+
+.menu {
+  font-size: 20px;
+  background: #F2F2F2;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.left {
+  display: flex;
+  gap: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  background: #e5e7eb;
+  border-radius: 50%;
+}
+
+.top-line {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  margin-left: 30px;
+}
+
+.time {
+  color: #9ca3af;
+}
+
+p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 4px 0 0;
+  margin-left: 30px;
+}
+
+.rating {
+  color: #f59e0b;
+  font-size: 13px;
+}
+
+/* .footer {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 6px;
+  font-size: 12px;
+  margin-top: 12px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+} */
+.footer {
+  margin-top: auto;
+
+
+  margin-left: -18px;
+  margin-right: -18px;
+
+  padding: 14px 18px;
+  border-top: 1px solid #eef1f5;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 12px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+.reviews-list {
+  max-height: 264px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.reviews-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reviews-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}

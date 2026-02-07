@@ -1,0 +1,15 @@
+<div class="traffic-card">
+
+  <h6>Traffic by Website</h6>
+
+  <div class="traffic-row" *ngFor="let s of sources">
+    <span class="name">{{ s.name }}</span>
+
+    <div class="segments">
+      <div class="seg black" [style.width.px]="s.black"></div>
+      <div class="seg grey1" [style.width.px]="s.grey1"></div>
+      <div class="seg grey2" [style.width.px]="s.grey2"></div>
+    </div>
+  </div>
+
+</div>

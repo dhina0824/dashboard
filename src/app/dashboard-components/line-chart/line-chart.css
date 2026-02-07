@@ -1,0 +1,70 @@
+.chart-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  margin-left: 20px;
+
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 4px 6px;
+  font-size: 16px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.year {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 22px;
+  border-left: 1px solid #e5e7eb;
+}
+
+.dark-dot,
+.light-dot {
+  font-size: 14px;
+}
+
+
+.tabs span {
+  margin-right: 18px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tabs span:hover {
+  color: #111;
+}
+
+.tabs .active {
+  color: #111;
+  font-weight: 600;
+}
+
+.dark-dot {
+  color: #111;
+}
+
+.light-dot {
+  color: #60a5fa;
+}
+
+.chart-body {
+  height: 300px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
